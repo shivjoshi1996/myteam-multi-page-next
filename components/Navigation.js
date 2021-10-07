@@ -3,16 +3,20 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 const StyledMobileNavWrapper = styled.div`
+  @media (min-width: 768px) {
+    display: none;
+  }
   position: relative;
 
   button {
     background-color: transparent;
     border: none;
     padding-right: 7%;
+    cursor: pointer;
   }
 `;
 
-const StyledNav = styled.nav`
+const StyledMobileNav = styled.nav`
   background-color: ${(props) => props.theme.colors.primary1};
   position: relative;
   ul {
@@ -79,52 +83,106 @@ const StyledNavActiveMenuLinksWrapper = styled.ul`
   }
 `;
 
+const StyledDesktopNavWrapper = styled.div`
+  @media (min-width: 768px) {
+    display: block;
+  }
+  display: none;
+
+  background-color: ${(props) => props.theme.colors.primary1};
+`;
+
+const StyledDesktopNav = styled.nav`
+  width: 90%;
+  margin: 0 auto;
+  color: ${(props) => props.theme.colors.primary3};
+  height: 20vh;
+  max-height: 150px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+`;
+
+const StyledDesktopLinksLeft = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 50%;
+`;
+
+const StyledDesktopLinksRight = styled.div`
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+`;
+
 export default function Navigation() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
-    <StyledMobileNavWrapper>
-      <StyledNav>
-        <ul>
-          <li>
-            <StyledLogo src="/logo.svg" alt="myteam logo" />
-          </li>
-          <li>
-            <button type="button">
-              <img
-                src="/icon-hamburger.svg"
-                alt=""
-                onClick={() => setMobileNavOpen(true)}
-              />
-            </button>
-          </li>
-        </ul>
-      </StyledNav>
-      <StyledNavActive mobileNavOpen={mobileNavOpen}>
-        <StyledNavOverlay />
-        <StyledNavActiveMenu>
-          <StyledNavActiveMenuCloseWrapper>
-            <button type="button">
-              <img
-                src="/icon-close.svg"
-                alt="close icon"
-                onClick={() => setMobileNavOpen(false)}
-              />
-            </button>
-          </StyledNavActiveMenuCloseWrapper>
-          <StyledNavActiveMenuLinksWrapper>
+    <>
+      <StyledMobileNavWrapper>
+        <StyledMobileNav>
+          <ul>
             <li>
-              <Link href="/">Home</Link>
+              <StyledLogo src="/logo.svg" alt="myteam logo" />
             </li>
             <li>
-              <Link href="/about">about</Link>
+              <button type="button">
+                <img
+                  src="/icon-hamburger.svg"
+                  alt=""
+                  onClick={() => setMobileNavOpen(true)}
+                />
+              </button>
             </li>
-            <li>
-              <Link href="/contact">Contact Us</Link>
-            </li>
-          </StyledNavActiveMenuLinksWrapper>
-        </StyledNavActiveMenu>
-      </StyledNavActive>
-    </StyledMobileNavWrapper>
+          </ul>
+        </StyledMobileNav>
+        <StyledNavActive mobileNavOpen={mobileNavOpen}>
+          <StyledNavOverlay />
+          <StyledNavActiveMenu>
+            <StyledNavActiveMenuCloseWrapper>
+              <button type="button">
+                <img
+                  src="/icon-close.svg"
+                  alt="close icon"
+                  onClick={() => setMobileNavOpen(false)}
+                />
+              </button>
+            </StyledNavActiveMenuCloseWrapper>
+            <StyledNavActiveMenuLinksWrapper>
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/about">about</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contact Us</Link>
+              </li>
+            </StyledNavActiveMenuLinksWrapper>
+          </StyledNavActiveMenu>
+        </StyledNavActive>
+      </StyledMobileNavWrapper>
+      <StyledDesktopNavWrapper>
+        <StyledDesktopNav>
+          <ul>
+            <StyledDesktopLinksLeft>
+              <li>
+                <StyledLogo src="/logo.svg" alt="myteam logo" />
+              </li>
+              <li>Home</li>
+              <li>About</li>
+            </StyledDesktopLinksLeft>
+            <StyledDesktopLinksRight>
+              <li>Contact</li>
+            </StyledDesktopLinksRight>
+          </ul>
+        </StyledDesktopNav>
+      </StyledDesktopNavWrapper>
+    </>
   );
 }
