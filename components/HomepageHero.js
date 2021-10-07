@@ -3,7 +3,8 @@ import styled from 'styled-components';
 const StyledHomepageHeroWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.primary1};
   color: ${(props) => props.theme.colors.primary3};
-  min-height: 80vh;
+  height: 80vh;
+  max-height: 700px;
 
   background-image: url('bg-pattern-home-2.svg');
   background-repeat: no-repeat;
@@ -14,13 +15,23 @@ const StyledHomepageHeroWrapper = styled.div`
   align-items: center;
   text-align: center;
 
+  @media (min-width: 768px) {
+    background-size: 50vw;
+  }
+
   h1 {
     font-size: 2.5rem;
     font-weight: bold;
     width: 65%;
     margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 18px;
+    margin-top: 3.125rem;
+    margin-bottom: 1.125rem;
+
+    @media (min-width: 768px) {
+      font-size: 4rem;
+      max-width: 683px;
+      margin-bottom: 1.5rem;
+    }
   }
   span {
     color: ${(props) => props.theme.colors.primary2};
@@ -29,6 +40,10 @@ const StyledHomepageHeroWrapper = styled.div`
     width: 95%;
     margin: 0 auto;
     line-height: 28px;
+
+    @media (min-width: 768px) {
+      max-width: 457px;
+    }
   }
 `;
 

@@ -21,8 +21,8 @@ const StyledNav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 48px;
-    padding-bottom: 48px;
+    height: 20vh;
+    max-height: 200px;
     position: relative;
   }
 `;
@@ -41,7 +41,7 @@ const StyledNavActive = styled.nav`
   top: 0;
   transition: 1s;
   transform: ${(props) =>
-    props.mobileNavOpen ? 'translateX(0vh)' : 'translateX(100vh)'};
+    props.mobileNavOpen ? 'translateX(0vw)' : 'translateX(100vw)'};
 `;
 
 const StyledNavOverlay = styled.div`
@@ -60,8 +60,7 @@ const StyledNavActiveMenu = styled.div`
 `;
 
 const StyledNavActiveMenuCloseWrapper = styled.div`
-  padding-top: 55px;
-  padding-bottom: 55px;
+  min-height: 20vh;
   width: 100%;
   margin: 0 auto;
   display: flex;
