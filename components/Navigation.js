@@ -104,12 +104,17 @@ const StyledDesktopNav = styled.nav`
     align-items: center;
     height: 100%;
   }
+
+  a {
+    text-decoration: none;
+    color: ${(props) => props.theme.colors.primary3};
+  }
 `;
 
 const StyledDesktopLinksLeft = styled.div`
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 15%;
   width: 50%;
 `;
 
@@ -117,6 +122,12 @@ const StyledDesktopLinksRight = styled.div`
   width: 50%;
   display: flex;
   justify-content: flex-end;
+`;
+
+const StyledContactLink = styled.a`
+  border-radius: 24px;
+  border: 2px solid white;
+  padding: 9px 33px;
 `;
 
 export default function Navigation() {
@@ -161,7 +172,9 @@ export default function Navigation() {
                 <Link href="/about">about</Link>
               </li>
               <li>
-                <Link href="/contact">Contact Us</Link>
+                <Link href="/contact" passHref>
+                  <StyledContactLink>Contact Us</StyledContactLink>
+                </Link>
               </li>
             </StyledNavActiveMenuLinksWrapper>
           </StyledNavActiveMenu>
@@ -174,11 +187,19 @@ export default function Navigation() {
               <li>
                 <StyledLogo src="/logo.svg" alt="myteam logo" />
               </li>
-              <li>Home</li>
-              <li>About</li>
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/about">About</Link>
+              </li>
             </StyledDesktopLinksLeft>
             <StyledDesktopLinksRight>
-              <li>Contact</li>
+              <li>
+                <Link href="/contact" passHref>
+                  <StyledContactLink>Contact</StyledContactLink>
+                </Link>
+              </li>
             </StyledDesktopLinksRight>
           </ul>
         </StyledDesktopNav>
