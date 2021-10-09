@@ -51,6 +51,12 @@ const StyledContactDisclaimerContentWrapper = styled.div`
     text-decoration: none;
     border: 2px solid ${(props) => props.theme.colors.secondary4};
     border-radius: 24px;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: ${(props) => props.theme.colors.secondary4};
+      color: white;
+    }
   }
 `;
 
