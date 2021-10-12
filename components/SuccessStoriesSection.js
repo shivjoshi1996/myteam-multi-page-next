@@ -27,28 +27,21 @@ const StyledSuccessStoriesContainer = styled.div`
   flex-direction: column;
   gap: 3rem;
   text-align: center;
+  width: 90%;
+  margin: 0 auto;
 `;
 
 const StyledSuccessStory = styled.div`
   color: ${(props) => props.theme.colors.primary3};
-
-  p {
-    font-size: 15px;
-    line-height: 25px;
-    margin-bottom: 16px;
-  }
+  background-image: url('/icon-quotes.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
 
   h3 {
     color: ${(props) => props.theme.colors.secondary1};
     font-weight: bold;
     font-size: 18px;
-    margin-bottom: 2px;
-  }
-
-  h3 + p {
-    font-style: italic;
-    font-size: 0.8125rem;
-    margin-bottom: 16px;
+    margin-bottom: 5px;
   }
 
   img {
@@ -57,6 +50,19 @@ const StyledSuccessStory = styled.div`
     border: 2px solid #c4fffe;
     border-radius: 100px;
   }
+`;
+
+const StyledSuccessStoryDescription = styled.p`
+  margin-bottom: 1rem;
+  padding-top: 2.25rem;
+  font-size: 0.9375rem;
+  line-height: 25px;
+`;
+
+const StyledSuccessStoryJobTitle = styled.p`
+  font-style: italic;
+  font-size: 0.8125rem;
+  margin-bottom: 16px;
 `;
 
 export default function SuccessStoriesSection() {
@@ -68,34 +74,40 @@ export default function SuccessStoriesSection() {
       </h2>
       <StyledSuccessStoriesContainer>
         <StyledSuccessStory>
-          <p>
+          <StyledSuccessStoryDescription>
             “The team perfectly fit the specialized skill set required. They
             focused on the most essential features helping us launch the
             platform eight months faster than planned.”
-          </p>
+          </StyledSuccessStoryDescription>
           <h3>Kady Baker</h3>
-          <p>Product Manager at Bookmark</p>
+          <StyledSuccessStoryJobTitle>
+            Product Manager at Bookmark
+          </StyledSuccessStoryJobTitle>
           <img src="/avatar-kady.jpg" alt="" />
         </StyledSuccessStory>
         <StyledSuccessStory>
-          <p>
-            “The team perfectly fit the specialized skill set required. They
-            focused on the most essential features helping us launch the
-            platform eight months faster than planned.”
-          </p>
-          <h3>Kady Baker</h3>
-          <p>Product Manager at Bookmark</p>
-          <img src="/avatar-kady.jpg" alt="" />
+          <StyledSuccessStoryDescription>
+            “We needed to automate our entire onboarding process. The team came
+            in and built out the whole journey. Since going live, user retention
+            has gone through the roof!”
+          </StyledSuccessStoryDescription>
+          <h3>Aiysha Reese</h3>
+          <StyledSuccessStoryJobTitle>
+            Founder of Manage
+          </StyledSuccessStoryJobTitle>
+          <img src="/avatar-aiysha.jpg" alt="" />
         </StyledSuccessStory>
         <StyledSuccessStory>
-          <p>
-            “The team perfectly fit the specialized skill set required. They
-            focused on the most essential features helping us launch the
-            platform eight months faster than planned.”
-          </p>
-          <h3>Kady Baker</h3>
-          <p>Product Manager at Bookmark</p>
-          <img src="/avatar-kady.jpg" alt="" />
+          <StyledSuccessStoryDescription>
+            “Amazing. Our team helped us build an app that delivered a new
+            experience for hiring a physio. The launch was an instant success
+            with 100k downloads in the first month.”
+          </StyledSuccessStoryDescription>
+          <h3>Arthur Clarke</h3>
+          <StyledSuccessStoryJobTitle>
+            Co-founder of MyPhysio
+          </StyledSuccessStoryJobTitle>
+          <img src="/avatar-arthur.jpg" alt="" />
         </StyledSuccessStory>
       </StyledSuccessStoriesContainer>
     </StyledSuccessStoriesSection>
