@@ -9,12 +9,23 @@ const StyledSuccessStoriesSection = styled.section`
   padding-top: 8.75rem;
   padding-bottom: 10.25rem;
 
+  @media (min-width: 768px) {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+  }
+
   h2 {
     color: ${(props) => props.theme.colors.primary3};
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
     margin-bottom: 3rem;
+
+    @media (min-width: 768px) {
+      width: 60%;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+    }
 
     span {
       color: ${(props) => props.theme.colors.secondary1};
@@ -29,6 +40,10 @@ const StyledSuccessStoriesContainer = styled.div`
   text-align: center;
   width: 90%;
   margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 70%;
+  }
 `;
 
 const StyledSuccessStory = styled.div`
