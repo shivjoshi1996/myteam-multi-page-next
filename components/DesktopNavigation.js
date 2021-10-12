@@ -12,6 +12,7 @@ const StyledDesktopNavWrapper = styled.div`
 
 const StyledDesktopNav = styled.nav`
   width: 90%;
+  max-width: 1110px;
   margin: 0 auto;
   color: ${(props) => props.theme.colors.primary3};
   height: 20vh;
