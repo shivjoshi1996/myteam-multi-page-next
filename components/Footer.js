@@ -11,6 +11,11 @@ const StyledFooter = styled.footer`
   p {
     opacity: 0.6;
   }
+
+  @media (min-width: 1080px) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 `;
 
 const StyledFooterWrapper = styled.div`
@@ -39,6 +44,7 @@ const StyledFooterTopContainer = styled.div`
   }
 
   @media (min-width: 1080px) {
+    width: 100%;
     margin-bottom: unset;
     justify-content: unset;
     gap: 125px;
@@ -82,6 +88,12 @@ const StyledFooterBottomContainer = styled.div`
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
+  }
+
+  @media (min-width: 1080px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
   }
 `;
 
