@@ -24,7 +24,7 @@ const StyledFooterNavigationLinks = styled.ul`
   }
 `;
 
-const StyledFooterAddress = styled.ul`
+const StyledFooterAddress = styled.address`
   opacity: 0.6;
 `;
 
@@ -47,10 +47,14 @@ export default function Footer() {
         </li>
       </StyledFooterNavigationLinks>
       <StyledFooterAddress>
-        <li>987 Hillcrest Lane</li>
-        <li>Irvine, CA</li>
-        <li>California 92714</li>
-        <li>Call Us : 949-833-7432</li>
+        987 Hillcrest Lane
+        <br />
+        Irvine, CA
+        <br />
+        California 92714
+        <br />
+        Call Us : 949-833-7432
+        <br />
       </StyledFooterAddress>
       <StyledFooterSocialLinks>
         <li>
