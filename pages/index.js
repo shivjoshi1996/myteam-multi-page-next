@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import ContactDisclaimer from '../components/ContactDisclaimer';
 import DistributedTeamsSection from '../components/DistributedTeamsSection';
+import Footer from '../components/Footer';
 import HomepageHero from '../components/HomepageHero';
 import Navigation from '../components/Navigation';
 import SuccessStoriesSection from '../components/SuccessStoriesSection';
@@ -18,6 +19,7 @@ export default function Home() {
       <DistributedTeamsSection />
       <SuccessStoriesSection />
       <ContactDisclaimer />
+      <Footer />
     </>
   );
 }
