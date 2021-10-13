@@ -11,11 +11,16 @@ const StyledDistributedSection = styled.section`
   @media (min-width: 768px) {
     padding-bottom: 6.25rem;
   }
+
+  @media (min-width: 1080px) {
+    background-position: left calc(100% + 100px) top 100%;
+  }
 `;
 
 const StyledDistributedWrapper = styled.div`
   width: 90%;
   margin: 0 auto;
+  max-width: 1110px;
 
   @media (min-width: 768px) {
     width: 80%;
@@ -35,6 +40,10 @@ const StyledDistributedHeading = styled.div`
     font-size: 2rem;
     color: ${(props) => props.theme.colors.primary3};
     font-weight: 700;
+
+    @media (min-width: 1080px) {
+      font-size: 3rem;
+    }
   }
 
   @media (min-width: 768px) {

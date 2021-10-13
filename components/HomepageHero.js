@@ -4,19 +4,23 @@ const StyledHomepageHeroWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.primary1};
   color: ${(props) => props.theme.colors.primary3};
   height: 80vh;
-  max-height: 700px;
+  max-height: 500px;
 
   background-image: url('bg-pattern-home-2.svg');
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-size: 95vw;
+  background-size: 358px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 
-  @media (min-width: 768px) {
-    background-size: 50vw;
+  @media (min-width: 1080px) {
+    background-image: url('bg-pattern-home-2.svg'), url('bg-pattern-home-1.svg');
+    background-size: 358px, 200px;
+    background-position: calc(80%) 100%, calc(0% - 100px) 50%;
+    text-align: left;
+    justify-content: center;
   }
 
   h1 {
@@ -32,6 +36,13 @@ const StyledHomepageHeroWrapper = styled.div`
       max-width: 683px;
       margin-bottom: 1.5rem;
     }
+
+    @media (min-width: 1080px) {
+      font-size: 100px;
+      width: 60%;
+      margin-bottom: unset;
+      margin-top: unset;
+    }
   }
   span {
     color: ${(props) => props.theme.colors.primary2};
@@ -44,11 +55,25 @@ const StyledHomepageHeroWrapper = styled.div`
     @media (min-width: 768px) {
       max-width: 457px;
     }
+
+    @media (min-width: 1080px) {
+      font-size: 1.125rem;
+      width: 40%;
+    }
   }
 `;
 
 const StyledHomepageHeroContentWrapper = styled.div`
+  width: 90%;
   margin: 0 auto;
+
+  @media (min-width: 1080px) {
+    display: flex;
+    align-items: flex-end;
+    gap: 60px;
+    width: 80%;
+    max-width: 1110px;
+  }
 `;
 
 export default function HomepageHero() {
