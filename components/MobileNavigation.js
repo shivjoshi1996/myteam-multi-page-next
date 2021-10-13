@@ -60,7 +60,8 @@ const StyledNavActiveMenu = styled.div`
   width: 70%;
   background-image: url('/bg-pattern-about-1-mobile-nav-1.svg');
   background-repeat: no-repeat;
-  background-position: right -30vw bottom 0vh;
+  background-size: 200px;
+  background-position: calc(100% + 100px) calc(100%);
 `;
 
 const StyledNavActiveMenuCloseWrapper = styled.div`
