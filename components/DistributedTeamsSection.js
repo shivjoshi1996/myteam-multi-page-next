@@ -21,6 +21,11 @@ const StyledDistributedWrapper = styled.div`
     width: 80%;
     margin: 0 auto;
   }
+
+  @media (min-width: 1080px) {
+    display: flex;
+    gap: 125px;
+  }
 `;
 
 const StyledDistributedHeading = styled.div`
