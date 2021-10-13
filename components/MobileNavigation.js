@@ -84,10 +84,14 @@ const StyledNavActiveMenuLinksWrapper = styled.ul`
   }
 `;
 
-const StyledContactLink = styled.a`
-  border-radius: 24px;
-  border: 2px solid white;
-  padding: 9px 33px;
+const StyledContactLink = styled.li`
+  margin-top: 36px;
+
+  a {
+    border-radius: 24px;
+    border: 2px solid white;
+    padding: 9px 33px;
+  }
 `;
 
 export default function MobileNavigation() {
@@ -130,11 +134,9 @@ export default function MobileNavigation() {
             <li>
               <Link href="/about">about</Link>
             </li>
-            <li>
-              <Link href="/contact" passHref>
-                <StyledContactLink>Contact Us</StyledContactLink>
-              </Link>
-            </li>
+            <StyledContactLink>
+              <Link href="/contact">Contact Us</Link>
+            </StyledContactLink>
           </StyledNavActiveMenuLinksWrapper>
         </StyledNavActiveMenu>
       </StyledNavActive>
