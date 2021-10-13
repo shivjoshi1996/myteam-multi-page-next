@@ -23,10 +23,15 @@ const StyledDesktopNav = styled.nav`
     align-items: center;
     height: 100%;
   }
+`;
 
-  a {
-    text-decoration: none;
-    color: ${(props) => props.theme.colors.primary3};
+const StyledNavLink = styled.a`
+  text-decoration: none;
+  color: ${(props) => props.theme.colors.primary3};
+  transition: 0.2s;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary2};
   }
 `;
 
@@ -47,6 +52,14 @@ const StyledContactLink = styled.a`
   border-radius: 24px;
   border: 2px solid white;
   padding: 9px 33px;
+  transition: 0.2s;
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    color: #002529;
+    background-color: white;
+  }
 `;
 
 const StyledLogo = styled.img`
@@ -64,10 +77,14 @@ export default function DesktopNavigation() {
               <StyledLogo src="/logo.svg" alt="myteam logo" />
             </li>
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/" passHref>
+                <StyledNavLink>Home</StyledNavLink>
+              </Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link href="/about" passHref>
+                <StyledNavLink>About</StyledNavLink>
+              </Link>
             </li>
           </StyledDesktopLinksLeft>
           <StyledDesktopLinksRight>
