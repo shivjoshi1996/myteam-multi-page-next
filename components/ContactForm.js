@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledContactForm = styled.form`
-  background-color: ${(props) => props.theme.colors.primary1};
+  background-color: transparent;
   color: white;
   display: flex;
   flex-direction: column;
