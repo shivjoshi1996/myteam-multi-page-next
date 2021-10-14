@@ -8,6 +8,7 @@ export default function About() {
     <>
       <Navigation />
       <AboutHero />
+      <ClientsSection />
       <Footer />
     </>
   );
