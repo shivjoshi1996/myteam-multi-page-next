@@ -20,6 +20,11 @@ const StyledContactSection = styled.section`
       calc(100% + 100px) 100%;
     padding-top: 40px;
   }
+
+  @media (min-width: 1080px) {
+    padding-bottom: 120px;
+    padding-top: 120px;
+  }
 `;
 
 const StyledContactContentWrapper = styled.div`
