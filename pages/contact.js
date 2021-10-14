@@ -10,6 +10,13 @@ const StyledContactSection = styled.section`
   background-image: url('/bg-pattern-contact-2.svg');
   background-repeat: no-repeat;
   background-position: calc(100% + 100px) calc(100% + 100px);
+
+  @media (min-width: 768px) {
+    background-image: url('/bg-pattern-about-2-contact-1.svg'),
+      url('/bg-pattern-contact-2.svg');
+    background-repeat: no-repeat;
+    background-position: calc(0% - 100px) 0%, calc(100% + 100px) 100%;
+  }
 `;
 
 const StyledContactContentWrapper = styled.div`
@@ -20,6 +27,12 @@ const StyledContactContentWrapper = styled.div`
   padding-bottom: 88px;
   padding-top: 20px;
 
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+`;
+
+const StyledContactPageHeading = styled.div`
   h1,
   h2 {
     font-weight: bold;
@@ -28,19 +41,15 @@ const StyledContactContentWrapper = styled.div`
   h1 {
     font-size: 2.5rem;
     color: white;
-  }
 
+    @media (min-width: 768px) {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+    }
+  }
   h2 {
     font-size: 32px;
     color: ${(props) => props.theme.colors.primary2};
-  }
-`;
-
-const StyledContactPageHeading = styled.div`
-  h1 {
-    margin-bottom: 16px;
-  }
-  h2 {
     margin-bottom: 40px;
   }
 `;
@@ -82,7 +91,7 @@ export default function Contact() {
           <StyledAskAboutContainer>
             <StyledAskAboutItem>
               <img src="/icon-person.svg" alt="" />
-              <p>The Quality of our talent</p>
+              <p>The Quality of our talent network</p>
             </StyledAskAboutItem>
             <StyledAskAboutItem>
               <img src="/icon-cog.svg" alt="" />
