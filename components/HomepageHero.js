@@ -51,6 +51,16 @@ const StyledHomepageHeroWrapper = styled.div`
     width: 95%;
     margin: 0 auto;
     line-height: 28px;
+    position: relative;
+
+    /* &:before {
+      content: ' ';
+      top: -80px;
+      width: 50px;
+      height: 4px;
+      position: absolute;
+      background-color: #79c8c7;
+    } */
 
     @media (min-width: 768px) {
       max-width: 457px;

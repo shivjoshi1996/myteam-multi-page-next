@@ -116,7 +116,7 @@ export default function MobileNavigation() {
         </ul>
       </StyledMobileNav>
       <StyledNavActive mobileNavOpen={mobileNavOpen}>
-        <StyledNavOverlay />
+        <StyledNavOverlay onClick={() => setMobileNavOpen(false)} />
         <StyledNavActiveMenu>
           <StyledNavActiveMenuCloseWrapper>
             <button type="button">
