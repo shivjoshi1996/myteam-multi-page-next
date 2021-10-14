@@ -6,6 +6,7 @@ const StyledContactForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 24px;
+  width: 100%;
 
   input[type='text'],
   input[type='email'],
@@ -14,12 +15,19 @@ const StyledContactForm = styled.form`
     background-color: transparent;
     border-bottom: 1px solid #79c8c7;
     padding-bottom: 21px;
+    color: white;
+    font-family: ${(props) => props.theme.font};
+  }
+
+  textarea {
+    resize: none;
   }
 
   label {
     display: flex;
     flex-direction: column;
     text-align: left;
+    gap: 5px;
   }
 
   input[type='submit'] {
