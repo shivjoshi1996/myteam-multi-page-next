@@ -101,35 +101,30 @@ const StyledSocialMediaContainer = styled.div`
   gap: 16px;
 `;
 
-export default function ProfileCard() {
+export default function ProfileCard({ profileImage, name, title, quote }) {
   const [isToggled, setIsToggled] = useState(false);
-
-  function handleToggle() {
-    setIsToggled(!isToggled);
-    console.log(isToggled);
-  }
 
   return (
     <StyledProfileCardContainer>
       <StyledProfileContentContainer>
         <StyledProfileOuterContent isToggled={isToggled}>
-          <img src="/avatar-nikita.jpg" alt="" />
-          <h3>Nikita Marks</h3>
-          <p>Founder & CEO</p>
+          <img src={profileImage} alt="" />
+          <h3>{name}</h3>
+          <p>{title}</p>
         </StyledProfileOuterContent>
         <StyledProfileInnerContent isToggled={isToggled}>
-          <h3>Aden Allan</h3>
-          <p>
-            “Empowered teams create truly amazing products. Set the north star
-            and let them follow it.”
-          </p>
+          <h3>{name}</h3>
+          <p>{quote}</p>
           <StyledSocialMediaContainer>
             <img src="/icon-twitter.svg" alt="" />
             <img src="/icon-linkedin.svg" alt="" />
           </StyledSocialMediaContainer>
         </StyledProfileInnerContent>
       </StyledProfileContentContainer>
-      <StyledProfileButton onClick={handleToggle} isToggled={isToggled}>
+      <StyledProfileButton
+        onClick={() => setIsToggled(!isToggled)}
+        isToggled={isToggled}
+      >
         <img src="/icon-cross.svg" alt="" />
       </StyledProfileButton>
     </StyledProfileCardContainer>
