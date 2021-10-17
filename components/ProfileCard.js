@@ -71,9 +71,11 @@ const StyledProfileInnerContent = styled.div`
   }
 `;
 
-const StyledProfileButton = styled.div`
+const StyledProfileButton = styled.button`
   height: 56px;
   width: 56px;
+  border: none;
+  cursor: pointer;
   background-color: ${(props) => (props.isToggled ? `#79C8C7` : `#F67E7E`)};
   display: inline-flex;
   justify-content: center;
@@ -84,6 +86,10 @@ const StyledProfileButton = styled.div`
   left: 50%;
   transform: translateX(-50%);
   transition: 0.5s;
+
+  &:hover {
+    background-color: ${(props) => (props.isToggled ? `#F67E7E` : `#79C8C7`)};
+  }
 
   img {
     width: 16px;

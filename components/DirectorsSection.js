@@ -3,6 +3,19 @@ import ProfileCard from './ProfileCard';
 
 const StyledDirectorsSection = styled.section`
   background-color: ${(props) => props.theme.colors.secondary3};
+  padding: 88px 0px;
+  background-image: url('/bg-pattern-about-2-contact-1.svg'),
+    url('/bg-pattern-home-4-about-3.svg');
+  background-repeat: no-repeat;
+  background-position: calc(0% - 100px) calc(0% - 100px), 100% 100%;
+
+  h2 {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 48px;
+  }
 `;
 
 const StyledDirectorsGrid = styled.div`
