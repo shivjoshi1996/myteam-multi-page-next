@@ -8,11 +8,28 @@ const StyledClientsSection = styled.section`
   background-repeat: no-repeat;
   background-position: calc(0% - 100px) calc(0% - 100px);
 
+  @media (min-width: 768px) {
+    background-position: 0% calc(0% - 100px);
+  }
+
+  @media (min-width: 1080px) {
+    background-position: 0% 0%;
+    padding: 140px 0px;
+  }
+
   h2 {
     color: white;
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 4rem;
+
+    @media (min-width: 768px) {
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: 1080px) {
+      font-size: 48px;
+    }
   }
 `;
 
@@ -20,11 +37,31 @@ const StyledLogoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 70px;
+  gap: 52px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1080px) {
+    flex-wrap: wrap;
+    gap: 79px;
+  }
 
   img {
     max-width: 160px;
     height: auto;
+
+    @media (min-width: 768px) {
+      max-width: 100px;
+    }
+
+    @media (min-width: 1080px) {
+      max-width: 170px;
+    }
 
     &.small {
       max-width: 87px;
