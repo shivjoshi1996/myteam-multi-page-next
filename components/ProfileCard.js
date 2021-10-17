@@ -20,9 +20,8 @@ const StyledProfileContentContainer = styled.div`
   align-items: center;
 `;
 const StyledProfileOuterContent = styled.div`
-  /* position: absolute; */
   text-align: center;
-  display: none;
+  display: ${(props) => (props.isToggled ? 'none' : 'block')};
 
   img {
     width: 96px;
@@ -50,7 +49,7 @@ const StyledProfileOuterContent = styled.div`
 
 const StyledProfileInnerContent = styled.div`
   /* position: absolute; */
-  /* display: none; */
+  display: ${(props) => (props.isToggled ? 'block' : 'none')};
 
   text-align: center;
 
@@ -113,12 +112,12 @@ export default function ProfileCard() {
   return (
     <StyledProfileCardContainer>
       <StyledProfileContentContainer>
-        <StyledProfileOuterContent>
+        <StyledProfileOuterContent isToggled={isToggled}>
           <img src="/avatar-nikita.jpg" alt="" />
           <h3>Nikita Marks</h3>
           <p>Founder & CEO</p>
         </StyledProfileOuterContent>
-        <StyledProfileInnerContent>
+        <StyledProfileInnerContent isToggled={isToggled}>
           <h3>Aden Allan</h3>
           <p>
             “Empowered teams create truly amazing products. Set the north star
