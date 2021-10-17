@@ -37,6 +37,7 @@ const StyledLogo = styled.img`
 `;
 
 const StyledNavActive = styled.nav`
+  opacity: 0;
   min-height: 100vh;
   position: fixed;
   width: 100vw;
@@ -44,7 +45,7 @@ const StyledNavActive = styled.nav`
   display: flex;
   top: 0;
   transition: 1s;
-  transform: translateX(100%);
+  opacity: ${(props) => (props.mobileNavOpen ? '1' : '0')};
   transform: ${(props) =>
     props.mobileNavOpen ? 'translateX(0%)' : 'translateX(100%)'};
 `;
