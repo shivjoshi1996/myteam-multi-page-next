@@ -44,6 +44,7 @@ const StyledNavActive = styled.nav`
   display: flex;
   top: 0;
   transition: 1s;
+  transform: translateX(100%);
   transform: ${(props) =>
     props.mobileNavOpen ? 'translateX(0%)' : 'translateX(100%)'};
 `;
