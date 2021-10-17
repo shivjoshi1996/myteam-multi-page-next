@@ -43,8 +43,8 @@ const StyledNavActive = styled.nav`
   z-index: 99;
   display: flex;
   top: 0;
-  transition: 1s;
-  opacity: ${(props) => (props.mobileNavOpen ? '1' : '0')};
+  transform: ${(props) =>
+    props.mobileNavOpen ? 'translateX(0%)' : 'translateX(100%)'};
 `;
 
 const StyledNavOverlay = styled.div`
