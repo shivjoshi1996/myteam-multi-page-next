@@ -15,9 +15,7 @@ const appTheme = {
   font: `'Livvic', sans-serif`,
 };
 
-{
-  /* eslint-disable-next-line  */
-}
+// eslint-disable-next-line react/prop-types
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={appTheme}>
