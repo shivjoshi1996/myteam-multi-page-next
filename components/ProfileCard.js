@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledProfileCardContainer = styled.div`
   height: 281px;
   width: 100%;
-  background-color: red;
+  background-color: transparent;
   position: relative;
 `;
 
