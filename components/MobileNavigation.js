@@ -106,6 +106,7 @@ export default function MobileNavigation() {
           </li>
           <li>
             <button type="button">
+              {/* eslint-disable-next-line  */}
               <img
                 src="/icon-hamburger.svg"
                 alt=""
@@ -120,6 +121,7 @@ export default function MobileNavigation() {
         <StyledNavActiveMenu>
           <StyledNavActiveMenuCloseWrapper>
             <button type="button">
+              {/* eslint-disable-next-line  */}
               <img
                 src="/icon-close.svg"
                 alt="close icon"

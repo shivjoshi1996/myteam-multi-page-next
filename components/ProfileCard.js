@@ -107,6 +107,7 @@ const StyledSocialMediaContainer = styled.div`
   gap: 16px;
 `;
 
+// eslint-disable-next-line react/prop-types
 export default function ProfileCard({ profileImage, name, title, quote }) {
   const [isToggled, setIsToggled] = useState(false);
 
