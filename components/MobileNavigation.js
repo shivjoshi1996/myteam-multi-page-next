@@ -45,7 +45,7 @@ const StyledNavActive = styled.nav`
   top: 0;
   transition: 1s;
   transform: ${(props) =>
-    props.mobileNavOpen ? 'translateX(0vw)' : 'translateX(100vw)'};
+    props.mobileNavOpen ? 'translateX(0%)' : 'translateX(100%)'};
 `;
 
 const StyledNavOverlay = styled.div`
