@@ -14,6 +14,7 @@ const StyledDistributedSection = styled.section`
 
   @media (min-width: 1080px) {
     background-position: left calc(100% + 100px) top 100%;
+    padding: 12.375rem 0rem 8.75rem 0rem;
   }
 `;
 
@@ -38,6 +39,20 @@ const StyledDistributedHeading = styled.div`
   margin-bottom: 56px;
   h2 {
     color: ${(props) => props.theme.colors.primary3};
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -32px;
+      width: 50px;
+      height: 4px;
+      background-color: #f67e7e;
+
+      @media (min-width: 1080px) {
+        top: -54px;
+      }
+    }
 
     @media (min-width: 1080px) {
       font-size: 3rem;
