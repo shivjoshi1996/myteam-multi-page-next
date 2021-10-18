@@ -146,12 +146,11 @@ export default function MobileNavigation() {
         />
         <StyledNavActiveMenu mobileNavOpen={mobileNavOpen}>
           <StyledNavActiveMenuCloseWrapper>
-            <button type="button">
+            <button type="button" onClick={() => setMobileNavOpen(false)}>
               {/* eslint-disable-next-line  */}
               <img
                 src="/icon-close.svg"
                 alt="close icon"
-                onClick={() => setMobileNavOpen(false)}
               />
             </button>
           </StyledNavActiveMenuCloseWrapper>
