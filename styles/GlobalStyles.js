@@ -52,6 +52,13 @@ const GlobalStyles = createGlobalStyle`
   h1, h2, h3 {
     font-weight: bold;
   }
+
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.125rem;
+  }
 `;
 
 export default GlobalStyles;

@@ -62,7 +62,6 @@ const StyledContactPageHeading = styled.div`
     }
   }
   h2 {
-    font-size: 32px;
     color: ${(props) => props.theme.colors.primary2};
     margin-bottom: 40px;
 

@@ -19,7 +19,6 @@ const StyledClientsSection = styled.section`
 
   h2 {
     color: white;
-    font-size: 32px;
     margin-bottom: 4rem;
 
     @media (min-width: 768px) {

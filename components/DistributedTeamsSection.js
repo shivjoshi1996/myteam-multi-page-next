@@ -37,7 +37,6 @@ const StyledDistributedHeading = styled.div`
   width: 65%;
   margin-bottom: 56px;
   h2 {
-    font-size: 2rem;
     color: ${(props) => props.theme.colors.primary3};
 
     @media (min-width: 1080px) {
@@ -86,7 +85,6 @@ const StyledDistributedListItem = styled.div`
 
   h3 {
     color: ${(props) => props.theme.colors.primary2};
-    font-size: 18px;
     margin-bottom: 16px;
     grid-area: title;
 
