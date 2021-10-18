@@ -22,11 +22,12 @@ const StyledSuccessStoriesSection = styled.section`
   h2 {
     color: ${(props) => props.theme.colors.primary3};
     text-align: center;
+    width: 90%;
+    margin: 0 auto;
     margin-bottom: 3rem;
 
     @media (min-width: 768px) {
       width: 60%;
-      margin: 0 auto;
       margin-bottom: 3rem;
     }
 

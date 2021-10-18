@@ -51,11 +51,11 @@ export default function ContactForm() {
     <StyledContactForm>
       <label>
         Name:
-        <input type="text" name="name" />
+        <input type="text" name="name" required />
       </label>
       <label>
         Email:
-        <input type="email" name="email" />
+        <input type="email" name="email" required />
       </label>
       <label>
         Company Name:

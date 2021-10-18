@@ -67,7 +67,7 @@ const StyledFooterLogoLinksWrapper = styled.div`
 
 const StyledFooterAddress = styled.address`
   opacity: 0.6;
-  line-height: 24px;
+  line-height: 25px;
 
   @media (min-width: 768px) {
     text-align: right;
