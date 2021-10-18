@@ -21,6 +21,7 @@ const StyledHomepageHeroWrapper = styled.div`
     background-position: calc(80%) 100%, calc(0% - 100px) 50%;
     text-align: left;
     justify-content: center;
+    padding-bottom: 30px;
   }
 
   h1 {
@@ -36,7 +37,7 @@ const StyledHomepageHeroWrapper = styled.div`
 
     @media (min-width: 1080px) {
       font-size: 100px;
-      width: 60%;
+      width: 55%;
       margin-bottom: unset;
       margin-top: unset;
     }
@@ -50,22 +51,24 @@ const StyledHomepageHeroWrapper = styled.div`
     line-height: 28px;
     position: relative;
 
-    /* &:before {
-      content: ' ';
-      top: -80px;
-      width: 50px;
-      height: 4px;
-      position: absolute;
-      background-color: #79c8c7;
-    } */
-
     @media (min-width: 768px) {
       max-width: 457px;
     }
 
     @media (min-width: 1080px) {
       font-size: 1.125rem;
-      width: 40%;
+      width: 45%;
+      margin-top: auto;
+      padding-top: 79px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        content: '';
+        width: 50px;
+        height: 4px;
+        background-color: #79c8c7;
+      }
     }
   }
 `;
@@ -76,8 +79,8 @@ const StyledHomepageHeroContentWrapper = styled.div`
 
   @media (min-width: 1080px) {
     display: flex;
-    align-items: flex-end;
-    gap: 60px;
+    align-items: flex-start;
+    gap: 30px;
     width: 80%;
     max-width: 1110px;
   }
