@@ -59,6 +59,7 @@ const StyledNavOverlay = styled.div`
   width: 30%;
   opacity: ${(props) => (props.mobileNavOpen ? '1' : '0')};
   transition: 2s;
+  cursor: pointer;
 `;
 
 const StyledNavActiveMenu = styled.div`
