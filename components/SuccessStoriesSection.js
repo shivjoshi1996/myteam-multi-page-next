@@ -22,7 +22,6 @@ const StyledSuccessStoriesSection = styled.section`
   h2 {
     color: ${(props) => props.theme.colors.primary3};
     font-size: 2rem;
-    font-weight: bold;
     text-align: center;
     margin-bottom: 3rem;
 
@@ -70,7 +69,6 @@ const StyledSuccessStory = styled.div`
 
   h3 {
     color: ${(props) => props.theme.colors.secondary1};
-    font-weight: bold;
     font-size: 18px;
     margin-bottom: 5px;
   }

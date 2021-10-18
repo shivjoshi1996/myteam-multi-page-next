@@ -34,7 +34,6 @@ const StyledProfileOuterContent = styled.div`
   h3 {
     font-size: 18px;
     color: ${(props) => props.theme.colors.secondary1};
-    font-weight: bold;
     line-height: 28px;
   }
 
@@ -57,7 +56,6 @@ const StyledProfileInnerContent = styled.div`
     font-size: 18px;
     line-height: 28px;
     color: ${(props) => props.theme.colors.secondary1};
-    font-weight: 700;
     margin-bottom: 8px;
   }
 

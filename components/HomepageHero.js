@@ -25,7 +25,6 @@ const StyledHomepageHeroWrapper = styled.div`
 
   h1 {
     font-size: 2.5rem;
-    font-weight: bold;
     width: 65%;
     margin: 0 auto;
     margin-top: 3.125rem;

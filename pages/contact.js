@@ -52,11 +52,6 @@ const StyledContactTopContentContainer = styled.div`
 `;
 
 const StyledContactPageHeading = styled.div`
-  h1,
-  h2 {
-    font-weight: bold;
-  }
-
   h1 {
     font-size: 2.5rem;
     color: white;

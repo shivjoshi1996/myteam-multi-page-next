@@ -20,7 +20,6 @@ const StyledClientsSection = styled.section`
   h2 {
     color: white;
     font-size: 32px;
-    font-weight: bold;
     margin-bottom: 4rem;
 
     @media (min-width: 768px) {

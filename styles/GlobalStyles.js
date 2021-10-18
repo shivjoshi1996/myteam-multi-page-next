@@ -48,6 +48,10 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: ${(props) => props.theme.font};
   }
+
+  h1, h2, h3 {
+    font-weight: bold;
+  }
 `;
 
 export default GlobalStyles;

@@ -38,7 +38,6 @@ const StyledContactDisclaimerContentWrapper = styled.div`
 
   h2 {
     font-size: 2rem;
-    font-weight: bold;
     margin-bottom: 2.5rem;
 
     @media (min-width: 768px) {

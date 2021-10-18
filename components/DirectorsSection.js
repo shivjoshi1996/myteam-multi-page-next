@@ -12,7 +12,6 @@ const StyledDirectorsSection = styled.section`
   h2 {
     color: white;
     font-size: 32px;
-    font-weight: bold;
     text-align: center;
     margin-bottom: 48px;
   }
