@@ -51,6 +51,8 @@ const StyledNavOverlay = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   min-height: 100vh;
   width: 30%;
+  opacity: ${(props) => (props.mobileNavOpen ? '1' : '0')};
+  transition: 0.5s;
 `;
 
 const StyledNavActiveMenu = styled.div`
@@ -61,6 +63,8 @@ const StyledNavActiveMenu = styled.div`
   background-repeat: no-repeat;
   background-size: 200px;
   background-position: calc(100% + 100px) calc(100%);
+  opacity: ${(props) => (props.mobileNavOpen ? '1' : 0)};
+  transition: 0.5s;
 `;
 
 const StyledNavActiveMenuCloseWrapper = styled.div`
@@ -116,8 +120,11 @@ export default function MobileNavigation() {
         </ul>
       </StyledMobileNav>
       <StyledNavActive mobileNavOpen={mobileNavOpen}>
-        <StyledNavOverlay onClick={() => setMobileNavOpen(false)} />
-        <StyledNavActiveMenu>
+        <StyledNavOverlay
+          mobileNavOpen={mobileNavOpen}
+          onClick={() => setMobileNavOpen(false)}
+        />
+        <StyledNavActiveMenu mobileNavOpen={mobileNavOpen}>
           <StyledNavActiveMenuCloseWrapper>
             <button type="button">
               {/* eslint-disable-next-line  */}
