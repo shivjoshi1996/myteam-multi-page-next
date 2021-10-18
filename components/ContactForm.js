@@ -14,13 +14,15 @@ const StyledContactForm = styled.form`
     border: none;
     background-color: transparent;
     border-bottom: 1px solid #79c8c7;
-    padding-bottom: 21px;
+    padding-bottom: 0px;
     color: white;
     font-family: ${(props) => props.theme.font};
+    font-size: 1rem;
   }
 
   textarea {
     resize: none;
+    padding-bottom: 25px;
   }
 
   label {
@@ -28,6 +30,8 @@ const StyledContactForm = styled.form`
     flex-direction: column;
     text-align: left;
     gap: 5px;
+    font-size: 14px;
+    color: #ffffff99;
   }
 
   input[type='submit'] {

@@ -70,9 +70,16 @@ const StyledContactPageHeading = styled.div`
     font-size: 32px;
     color: ${(props) => props.theme.colors.primary2};
     margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 64px;
+    }
+    @media (min-width: 1080px) {
+      margin-bottom: 32px;
+    }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1080px) {
     text-align: left;
   }
 `;
