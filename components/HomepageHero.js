@@ -58,12 +58,10 @@ const StyledHomepageHeroWrapper = styled.div`
     @media (min-width: 1080px) {
       font-size: 1.125rem;
       width: 45%;
-      margin-top: auto;
-      padding-top: 79px;
 
       &::before {
         position: absolute;
-        top: 0;
+        top: -79px;
         content: '';
         width: 50px;
         height: 4px;
@@ -79,7 +77,7 @@ const StyledHomepageHeroContentWrapper = styled.div`
 
   @media (min-width: 1080px) {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 30px;
     width: 80%;
     max-width: 1110px;
