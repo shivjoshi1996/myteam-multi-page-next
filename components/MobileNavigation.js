@@ -13,6 +13,11 @@ const StyledMobileNavWrapper = styled.div`
     border: none;
     padding-right: calc(0vh + 10%);
     cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 `;
 
@@ -34,6 +39,7 @@ const StyledMobileNav = styled.nav`
 const StyledLogo = styled.img`
   width: 128px;
   height: auto;
+  cursor: pointer;
 `;
 
 const StyledNavActive = styled.nav`
@@ -52,7 +58,7 @@ const StyledNavOverlay = styled.div`
   min-height: 100vh;
   width: 30%;
   opacity: ${(props) => (props.mobileNavOpen ? '1' : '0')};
-  transition: 0.5s;
+  transition: 2s;
 `;
 
 const StyledNavActiveMenu = styled.div`
@@ -84,6 +90,11 @@ const StyledNavActiveMenuLinksWrapper = styled.ul`
   a {
     text-decoration: none;
     color: white;
+    transition: 0.2s;
+
+    &:hover {
+      color: ${(props) => props.theme.colors.primary2};
+    }
   }
 `;
 
@@ -94,6 +105,12 @@ const StyledContactLink = styled.li`
     border-radius: 24px;
     border: 2px solid white;
     padding: 9px 33px;
+    transition: 0.2s;
+
+    &:hover {
+      color: #002529;
+      background-color: white;
+    }
   }
 `;
 
@@ -105,7 +122,9 @@ export default function MobileNavigation() {
       <StyledMobileNav>
         <ul>
           <li>
-            <StyledLogo src="/logo.svg" alt="myteam logo" />
+            <Link href="/">
+              <StyledLogo src="/logo.svg" alt="myteam logo" />
+            </Link>
           </li>
           <li>
             <button type="button">

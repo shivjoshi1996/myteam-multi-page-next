@@ -9,21 +9,21 @@ const StyledContactSection = styled.section`
   background-image: url('/bg-pattern-contact-2.svg');
   background-repeat: no-repeat;
   background-position: calc(100% + 100px) calc(100% + 100px);
-  padding-bottom: 88px;
-  padding-top: 20px;
+  padding-bottom: 5.5rem;
+  padding-top: 1.25rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     background-image: url('/bg-pattern-about-2-contact-1.svg'),
       url('/bg-pattern-contact-2.svg');
     background-repeat: no-repeat;
     background-position: calc(0% - 100px) calc(0% + 35px),
       calc(100% + 100px) 100%;
-    padding-top: 40px;
+    padding-top: 2.5rem;
   }
 
-  @media (min-width: 1080px) {
-    padding-bottom: 120px;
-    padding-top: 120px;
+  @media (min-width: 67.5rem) {
+    padding-bottom: 7.5rem;
+    padding-top: 7.5rem;
   }
 `;
 
@@ -33,10 +33,10 @@ const StyledContactContentWrapper = styled.div`
 
   text-align: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     width: 70%;
   }
-  @media (min-width: 1080px) {
+  @media (min-width: 67.5rem) {
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -46,7 +46,7 @@ const StyledContactContentWrapper = styled.div`
 `;
 
 const StyledContactTopContentContainer = styled.div`
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     width: 100%;
   }
 `;
@@ -54,20 +54,21 @@ const StyledContactTopContentContainer = styled.div`
 const StyledContactPageHeading = styled.div`
   h1 {
     color: white;
+    margin-bottom: 1rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       margin-bottom: 1.5rem;
     }
   }
   h2 {
     color: ${(props) => props.theme.colors.primary2};
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 
-    @media (min-width: 768px) {
-      margin-bottom: 64px;
+    @media (min-width: 48rem) {
+      margin-bottom: 4rem;
     }
     @media (min-width: 1080px) {
-      margin-bottom: 32px;
+      margin-bottom: 2rem;
     }
   }
 
@@ -77,9 +78,9 @@ const StyledContactPageHeading = styled.div`
 `;
 
 const StyledAskAboutContainer = styled.div`
-  margin-bottom: 56px;
+  margin-bottom: 3.5rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     margin-bottom: unset;
   }
 `;
@@ -89,13 +90,13 @@ const StyledAskAboutItem = styled.div`
   gap: 23px;
   align-items: center;
   text-align: left;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 
   p {
     color: white;
     font-weight: bold;
     line-height: 28px;
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 `;
 

@@ -65,6 +65,7 @@ const StyledContactLink = styled.a`
 const StyledLogo = styled.img`
   width: 128px;
   height: auto;
+  cursor: pointer;
 `;
 
 export default function DesktopNavigation() {
@@ -74,7 +75,9 @@ export default function DesktopNavigation() {
         <ul>
           <StyledDesktopLinksLeft>
             <li>
-              <StyledLogo src="/logo.svg" alt="myteam logo" />
+              <Link href="/">
+                <StyledLogo src="/logo.svg" alt="myteam logo" />
+              </Link>
             </li>
             <li>
               <Link href="/" passHref>

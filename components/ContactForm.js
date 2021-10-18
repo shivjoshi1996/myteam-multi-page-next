@@ -43,6 +43,12 @@ const StyledContactForm = styled.form`
     width: 123px;
     height: 48px;
     border-radius: 100px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 `;
 

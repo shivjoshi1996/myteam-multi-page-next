@@ -3,11 +3,21 @@ import styled from 'styled-components';
 const AboutHeroWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.primary1};
   color: white;
-  padding-top: 20px;
-  padding-bottom: 108px;
+  padding-top: 1.25rem;
+  padding-bottom: 6.75rem;
   background-image: url('/bg-pattern-about-1-mobile-nav-1.svg');
   background-repeat: no-repeat;
   background-position: calc(100% + 100px) calc(100% + 100px);
+
+  @media (min-width: 48rem) {
+    padding-top: 3rem;
+    padding-bottom: 7rem;
+    background-position: calc(100% + 100px) 100%;
+  }
+  @media (min-width: 67.5rem) {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
 `;
 
 const AboutHeroContentWrapper = styled.div`
@@ -15,11 +25,42 @@ const AboutHeroContentWrapper = styled.div`
   margin: 0 auto;
   text-align: center;
 
+  @media (min-width: 67.5rem) {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 69.375rem;
+    text-align: left;
+  }
+
   h1 {
     margin-bottom: 16px;
+
+    @media (min-width: 768px) {
+      font-size: 64px;
+    }
   }
   p {
     line-height: 28px;
+
+    @media (min-width: 768px) {
+      width: 65%;
+      margin: 0 auto;
+    }
+    @media (min-width: 67.5rem) {
+      padding-top: 44px;
+
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 50px;
+        height: 4px;
+        background-color: #f67e7e;
+        position: absolute;
+        top: 0;
+      }
+    }
   }
 `;
 
