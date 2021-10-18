@@ -11,7 +11,7 @@ const StyledMobileNavWrapper = styled.div`
   button {
     background-color: transparent;
     border: none;
-    padding-right: 7%;
+    padding-right: calc(0vh + 10%);
     cursor: pointer;
   }
 `;
