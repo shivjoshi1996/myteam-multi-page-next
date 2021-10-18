@@ -105,6 +105,11 @@ const StyledFooterNavigationLinks = styled.ul`
   a {
     text-decoration: none;
     color: white;
+    transition: 0.2s;
+
+    &:hover {
+      color: ${(props) => props.theme.colors.primary2};
+    }
   }
 `;
 
@@ -113,11 +118,19 @@ const StyledFooterSocialLinks = styled.ul`
   justify-content: center;
   align-items: center;
   gap: 16px;
+  cursor: pointer;
+
+  li {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
 `;
 
 const StyledLogo = styled.img`
   width: 96px;
   height: auto;
+  cursor: pointer;
 `;
 
 export default function Footer() {
@@ -126,7 +139,9 @@ export default function Footer() {
       <StyledFooterWrapper>
         <StyledFooterTopContainer>
           <StyledFooterLogoLinksWrapper>
-            <StyledLogo src="/logo.svg" alt="myteam logo" />
+            <Link href="/">
+              <StyledLogo src="/logo.svg" alt="myteam logo" />
+            </Link>
             <StyledFooterNavigationLinks>
               <li>
                 <Link href="/">home</Link>
