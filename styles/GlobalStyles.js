@@ -53,6 +53,15 @@ const GlobalStyles = createGlobalStyle`
     font-weight: bold;
   }
 
+  h1 {
+    font-size: 2.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 4rem;
+    }
+    
+  }
+
   h2 {
     font-size: 2rem;
   }

@@ -16,7 +16,6 @@ const AboutHeroContentWrapper = styled.div`
   text-align: center;
 
   h1 {
-    font-size: 40px;
     margin-bottom: 16px;
   }
   p {

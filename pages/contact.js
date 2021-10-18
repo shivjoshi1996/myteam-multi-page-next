@@ -53,11 +53,9 @@ const StyledContactTopContentContainer = styled.div`
 
 const StyledContactPageHeading = styled.div`
   h1 {
-    font-size: 2.5rem;
     color: white;
 
     @media (min-width: 768px) {
-      font-size: 4rem;
       margin-bottom: 1.5rem;
     }
   }

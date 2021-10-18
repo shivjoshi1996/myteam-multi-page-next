@@ -24,14 +24,12 @@ const StyledHomepageHeroWrapper = styled.div`
   }
 
   h1 {
-    font-size: 2.5rem;
     width: 65%;
     margin: 0 auto;
     margin-top: 3.125rem;
     margin-bottom: 1.125rem;
 
     @media (min-width: 768px) {
-      font-size: 4rem;
       max-width: 683px;
       margin-bottom: 1.5rem;
     }
