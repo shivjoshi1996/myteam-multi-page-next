@@ -13,8 +13,9 @@ const StyledContactForm = styled.form`
   input[type='email'],
   textarea {
     border: none;
-    background-color: transparent;
     border-bottom: 1px solid #79c8c7;
+    border-radius: 0;
+    background-color: transparent;
     padding-bottom: 0px;
     color: white;
     font-family: ${(props) => props.theme.font};
