@@ -2,24 +2,24 @@ import styled from 'styled-components';
 import { useState } from 'react';
 
 const StyledContactForm = styled.form`
-  background-color: transparent;
-  color: white;
   display: flex;
   flex-direction: column;
   gap: 24px;
   width: 100%;
+  background-color: transparent;
+  color: ${(props) => props.theme.colors.primary3};
 
   input[type='text'],
   input[type='email'],
   textarea {
+    font-size: 1rem;
+    color: ${(props) => props.theme.colors.primary3};
+    font-family: ${(props) => props.theme.font};
+    padding-bottom: 0rem;
     border: none;
     border-bottom: 1px solid #79c8c7;
     border-radius: 0;
     background-color: transparent;
-    padding-bottom: 0px;
-    color: white;
-    font-family: ${(props) => props.theme.font};
-    font-size: 1rem;
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
@@ -27,26 +27,26 @@ const StyledContactForm = styled.form`
 
   textarea {
     resize: none;
-    padding-bottom: 25px;
+    padding-bottom: 1.5625rem;
   }
 
   label {
     display: flex;
     flex-direction: column;
-    text-align: left;
     gap: 5px;
-    font-size: 14px;
+    font-size: 0.875rem;
+    text-align: left;
     color: #ffffff99;
   }
 
   input[type='submit'] {
+    font-size: 1.125rem;
+    font-family: ${(props) => props.theme.font};
+    color: ${(props) => props.theme.colors.secondary3};
     background-color: white;
     border: none;
-    font-size: 18px;
-    font-family: ${(props) => props.theme.font};
-    color: #004047;
-    width: 123px;
-    height: 48px;
+    width: 7.6875rem;
+    height: 3rem;
     border-radius: 100px;
     cursor: pointer;
     transition: 0.2s;
@@ -58,12 +58,12 @@ const StyledContactForm = styled.form`
 `;
 
 const StyledErrorMessage = styled.p`
-  color: #f67e7e;
-  font-size: 10px;
-  font-style: italic;
+  margin-top: 0.5rem;
   height: 10px;
+  color: ${(props) => props.theme.colors.primary2};
+  font-size: 0.625rem;
+  font-style: italic;
   font-weight: bold;
-  margin-top: 8px;
 `;
 
 export default function ContactForm() {

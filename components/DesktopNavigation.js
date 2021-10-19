@@ -54,7 +54,7 @@ const StyledContactLink = styled.a`
   padding: 9px 33px;
   transition: 0.2s;
   text-decoration: none;
-  color: white;
+  color: ${(props) => props.theme.colors.primary3};
 
   &:hover {
     color: #002529;

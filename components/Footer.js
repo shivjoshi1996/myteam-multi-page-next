@@ -2,24 +2,23 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
-  background-color: ${(props) => props.theme.colors.secondary5};
-  text-align: center;
-  color: white;
   padding-top: 4.125rem;
   padding-bottom: 4rem;
+  background-color: ${(props) => props.theme.colors.secondary5};
+  color: ${(props) => props.theme.colors.primary3};
+  text-align: center;
 
   p {
     opacity: 0.6;
   }
 
-  @media (min-width: 1080px) {
-    padding-top: 48px;
-    padding-bottom: 48px;
+  @media (min-width: 67.5rem) {
+    padding: 3rem 0rem;
   }
 `;
 
 const StyledFooterWrapper = styled.div`
-  @media (min-width: 1080px) {
+  @media (min-width: 67.5rem) {
     display: flex;
     width: 90%;
     max-width: 1110px;
@@ -32,9 +31,9 @@ const StyledFooterTopContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     width: 90%;
     margin: 0 auto;
     flex-direction: row;
@@ -43,7 +42,7 @@ const StyledFooterTopContainer = styled.div`
     align-items: stretch;
   }
 
-  @media (min-width: 1080px) {
+  @media (min-width: 67.5rem) {
     width: 100%;
     margin-bottom: unset;
     justify-content: unset;
@@ -57,7 +56,7 @@ const StyledFooterLogoLinksWrapper = styled.div`
   align-items: center;
   gap: 24px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     text-align: left;
     gap: unset;
     align-items: flex-start;
@@ -69,11 +68,11 @@ const StyledFooterAddress = styled.address`
   opacity: 0.6;
   line-height: 25px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     text-align: right;
   }
 
-  @media (min-width: 1080px) {
+  @media (min-width: 67.5rem) {
     text-align: left;
   }
 `;
@@ -83,14 +82,14 @@ const StyledFooterBottomContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     flex-direction: row;
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
   }
 
-  @media (min-width: 1080px) {
+  @media (min-width: 67.5rem) {
     width: 100%;
     flex-direction: column;
     align-items: flex-end;
@@ -117,7 +116,7 @@ const StyledFooterSocialLinks = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
   cursor: pointer;
 
   li {
@@ -140,7 +139,7 @@ export default function Footer() {
         <StyledFooterTopContainer>
           <StyledFooterLogoLinksWrapper>
             <Link href="/">
-              <StyledLogo src="/logo.svg" alt="myteam logo" />
+              <StyledLogo src="/logo.svg" alt="myteam" />
             </Link>
             <StyledFooterNavigationLinks>
               <li>
@@ -165,13 +164,13 @@ export default function Footer() {
         <StyledFooterBottomContainer>
           <StyledFooterSocialLinks>
             <li>
-              <img src="/icon-facebook.svg" alt="" />
+              <img src="/icon-facebook.svg" alt="Link to facebook page" />
             </li>
             <li>
-              <img src="/icon-pinterest.svg" alt="" />
+              <img src="/icon-pinterest.svg" alt="Link to Pinterest page" />
             </li>
             <li>
-              <img src="/icon-twitter.svg" alt="" />
+              <img src="/icon-twitter.svg" alt="Link to Twitter page" />
             </li>
           </StyledFooterSocialLinks>
           <p>Copyright 2020. All Rights Reserved</p>

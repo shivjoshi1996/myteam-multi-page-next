@@ -9,12 +9,12 @@ const StyledSuccessStoriesSection = styled.section`
   padding-top: 8.75rem;
   padding-bottom: 10.25rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     padding-top: 6.25rem;
     padding-bottom: 6.25rem;
   }
 
-  @media (min-width: 1080px) {
+  @media (min-width: 67.5rem) {
     padding-top: 140px;
     padding-bottom: 140px;
   }
@@ -26,12 +26,12 @@ const StyledSuccessStoriesSection = styled.section`
     margin: 0 auto;
     margin-bottom: 3rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       width: 60%;
       margin-bottom: 3rem;
     }
 
-    @media (min-width: 1080px) {
+    @media (min-width: 67.5rem) {
       max-width: 58.25rem;
       font-size: 48px;
     }
@@ -50,14 +50,14 @@ const StyledSuccessStoriesContainer = styled.div`
   width: 90%;
   margin: 0 auto;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     width: 70%;
   }
 
-  @media (min-width: 1080px) {
+  @media (min-width: 67.5rem) {
     flex-direction: row;
     gap: 30px;
-    max-width: 69.375rem;
+    max-width: 1110px;
   }
 `;
 
@@ -69,7 +69,7 @@ const StyledSuccessStory = styled.div`
 
   h3 {
     color: ${(props) => props.theme.colors.secondary1};
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
   }
 
   img {
@@ -90,7 +90,7 @@ const StyledSuccessStoryDescription = styled.p`
 const StyledSuccessStoryJobTitle = styled.p`
   font-style: italic;
   font-size: 0.8125rem;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 `;
 
 export default function SuccessStoriesSection() {

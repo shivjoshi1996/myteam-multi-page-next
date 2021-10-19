@@ -8,11 +8,11 @@ const StyledDistributedSection = styled.section`
   padding-bottom: 4.1875rem;
   padding-top: 6.25rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     padding-bottom: 6.25rem;
   }
 
-  @media (min-width: 1080px) {
+  @media (min-width: 67.5rem) {
     background-position: left calc(100% + 100px) top 100%;
     padding: 12.375rem 0rem 8.75rem 0rem;
   }
@@ -23,12 +23,12 @@ const StyledDistributedWrapper = styled.div`
   margin: 0 auto;
   max-width: 1110px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     width: 80%;
     margin: 0 auto;
   }
 
-  @media (min-width: 1080px) {
+  @media (min-width: 67.5rem) {
     display: flex;
     gap: 125px;
   }
@@ -36,7 +36,7 @@ const StyledDistributedWrapper = styled.div`
 
 const StyledDistributedHeading = styled.div`
   width: 65%;
-  margin-bottom: 56px;
+  margin-bottom: 3.5rem;
   h2 {
     color: ${(props) => props.theme.colors.primary3};
     position: relative;
@@ -49,19 +49,15 @@ const StyledDistributedHeading = styled.div`
       height: 4px;
       background-color: #f67e7e;
 
-      @media (min-width: 1080px) {
+      @media (min-width: 67.5rem) {
         top: -54px;
       }
     }
-
-    @media (min-width: 1080px) {
-      font-size: 3rem;
-    }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     width: 70%;
-    margin-bottom: 64px;
+    margin-bottom: 4rem;
   }
 `;
 
@@ -71,13 +67,13 @@ const StyledDistributedListContainer = styled.div`
   text-align: center;
   gap: 48px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     text-align: left;
   }
 `;
 
 const StyledDistributedListItem = styled.div`
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     display: grid;
     grid-template-columns: 72px 1fr;
     grid-template-rows: auto auto;
@@ -90,20 +86,20 @@ const StyledDistributedListItem = styled.div`
   }
 
   img {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     grid-area: icon;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       margin-bottom: unset;
     }
   }
 
   h3 {
     color: ${(props) => props.theme.colors.primary2};
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     grid-area: title;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       margin-bottom: unset;
     }
   }
@@ -125,7 +121,7 @@ export default function DistributedTeamsSection() {
         </StyledDistributedHeading>
         <StyledDistributedListContainer>
           <StyledDistributedListItem>
-            <img src="/icon-person.svg" alt="person" />
+            <img src="/icon-person.svg" alt="" />
             <h3>Experienced Individuals</h3>
             <p>
               Our network is made up of highly experienced professionals who are
@@ -133,7 +129,7 @@ export default function DistributedTeamsSection() {
             </p>
           </StyledDistributedListItem>
           <StyledDistributedListItem>
-            <img src="/icon-cog.svg" alt="cog" />
+            <img src="/icon-cog.svg" alt="" />
             <h3>Easy to Implement</h3>
             <p>
               Our processes have been refined over years of implementation
@@ -141,7 +137,7 @@ export default function DistributedTeamsSection() {
             </p>
           </StyledDistributedListItem>
           <StyledDistributedListItem>
-            <img src="/icon-chart.svg" alt="chart" />
+            <img src="/icon-chart.svg" alt="" />
             <h3>Enhanced Productivity</h3>
             <p>
               Our customized platform with in-built analytics helps you manage
