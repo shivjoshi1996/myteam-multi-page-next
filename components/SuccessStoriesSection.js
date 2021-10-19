@@ -33,7 +33,6 @@ const StyledSuccessStoriesSection = styled.section`
 
     @media (min-width: 67.5rem) {
       max-width: 58.25rem;
-      font-size: 48px;
     }
 
     span {
