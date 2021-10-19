@@ -46,8 +46,10 @@ const StyledContactContentWrapper = styled.div`
 `;
 
 const StyledContactTopContentContainer = styled.div`
+  margin-bottom: 64px;
   @media (min-width: 48rem) {
     width: 100%;
+    margin-bottom: unset;
   }
 `;
 

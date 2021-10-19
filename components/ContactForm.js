@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useState } from 'react';
 
 const StyledContactForm = styled.form`
   background-color: transparent;
@@ -18,6 +19,9 @@ const StyledContactForm = styled.form`
     color: white;
     font-family: ${(props) => props.theme.font};
     font-size: 1rem;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
   }
 
   textarea {
@@ -52,30 +56,67 @@ const StyledContactForm = styled.form`
   }
 `;
 
+const StyledErrorMessage = styled.p`
+  color: #f67e7e;
+  font-size: 10px;
+  font-style: italic;
+  height: 10px;
+  font-weight: bold;
+  margin-top: 8px;
+`;
+
 export default function ContactForm() {
+  const [errorMessages, setErrorMessages] = useState({
+    name: null,
+    email: null,
+    company: null,
+    title: null,
+    message: null,
+  });
+
+  function validationCheck(e) {
+    // check if empty
+    if (e.target.value === '') {
+      setErrorMessages((prevErrors) => ({
+        ...prevErrors,
+        [e.target.name]: 'This field is required',
+      }));
+    } else {
+      setErrorMessages((prevErrors) => ({
+        ...prevErrors,
+        [e.target.name]: null,
+      }));
+    }
+  }
+
   return (
     <StyledContactForm>
       <label>
         Name:
-        <input type="text" name="name" required />
+        <input type="text" name="name" required onChange={validationCheck} />
+        <StyledErrorMessage>{errorMessages.name}</StyledErrorMessage>
       </label>
       <label>
         Email:
-        <input type="email" name="email" required />
+        <input type="email" name="email" required onChange={validationCheck} />
+        <StyledErrorMessage>{errorMessages.email}</StyledErrorMessage>
       </label>
       <label>
         Company Name:
-        <input type="text" name="company" />
+        <input type="text" name="company" required onChange={validationCheck} />
+        <StyledErrorMessage>{errorMessages.company}</StyledErrorMessage>
       </label>
       <label>
         Title:
-        <input type="text" name="title" />
+        <input type="text" name="title" required onChange={validationCheck} />
+        <StyledErrorMessage>{errorMessages.title}</StyledErrorMessage>
       </label>
       <label>
         Message:
-        <textarea />
+        <textarea name="message" required onChange={validationCheck} />
+        <StyledErrorMessage>{errorMessages.message}</StyledErrorMessage>
       </label>
-      <input type="submit" value="submit" />
+      <input type="submit" value="submit" onChange={validationCheck} />
     </StyledContactForm>
   );
 }

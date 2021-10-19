@@ -18,7 +18,7 @@ const StyledHomepageHeroWrapper = styled.div`
   @media (min-width: 1080px) {
     background-image: url('bg-pattern-home-2.svg'), url('bg-pattern-home-1.svg');
     background-size: 358px, 200px;
-    background-position: calc(80%) 100%, calc(0% - 100px) 50%;
+    background-position: calc(80%) 100%, calc(0% - 100px) 40%;
     text-align: left;
     justify-content: center;
     padding-bottom: 30px;
