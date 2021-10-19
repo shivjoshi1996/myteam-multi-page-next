@@ -93,30 +93,59 @@ export default function ContactForm() {
     <StyledContactForm>
       <label>
         Name:
-        <input type="text" name="name" required onChange={validationCheck} />
+        <input
+          type="text"
+          name="name"
+          required
+          onClick={validationCheck}
+          onChange={validationCheck}
+        />
         <StyledErrorMessage>{errorMessages.name}</StyledErrorMessage>
       </label>
       <label>
         Email:
-        <input type="email" name="email" required onChange={validationCheck} />
+        <input
+          type="email"
+          name="email"
+          required
+          onClick={validationCheck}
+          onChange={validationCheck}
+        />
         <StyledErrorMessage>{errorMessages.email}</StyledErrorMessage>
       </label>
       <label>
         Company Name:
-        <input type="text" name="company" required onChange={validationCheck} />
+        <input
+          type="text"
+          name="company"
+          required
+          onClick={validationCheck}
+          onChange={validationCheck}
+        />
         <StyledErrorMessage>{errorMessages.company}</StyledErrorMessage>
       </label>
       <label>
         Title:
-        <input type="text" name="title" required onChange={validationCheck} />
+        <input
+          type="text"
+          name="title"
+          required
+          onClick={validationCheck}
+          onChange={validationCheck}
+        />
         <StyledErrorMessage>{errorMessages.title}</StyledErrorMessage>
       </label>
       <label>
         Message:
-        <textarea name="message" required onChange={validationCheck} />
+        <textarea
+          name="message"
+          required
+          onClick={validationCheck}
+          onChange={validationCheck}
+        />
         <StyledErrorMessage>{errorMessages.message}</StyledErrorMessage>
       </label>
-      <input type="submit" value="submit" onChange={validationCheck} />
+      <input type="submit" value="submit" />
     </StyledContactForm>
   );
 }
