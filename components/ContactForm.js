@@ -76,8 +76,11 @@ export default function ContactForm() {
   });
 
   function validationCheck(e) {
+    // Get value and trim
+    let { value } = e.target;
+    value = value.trim();
     // check if empty
-    if (e.target.value === '') {
+    if (value === '') {
       setErrorMessages((prevErrors) => ({
         ...prevErrors,
         [e.target.name]: 'This field is required',
