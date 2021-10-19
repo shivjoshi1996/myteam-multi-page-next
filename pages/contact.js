@@ -30,7 +30,6 @@ const StyledContactSection = styled.section`
 const StyledContactContentWrapper = styled.div`
   width: 90%;
   margin: 0 auto;
-
   text-align: center;
 
   @media (min-width: 48rem) {
@@ -39,14 +38,14 @@ const StyledContactContentWrapper = styled.div`
   @media (min-width: 67.5rem) {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 1.875rem;
     width: 80%;
     max-width: 1110px;
   }
 `;
 
 const StyledContactTopContentContainer = styled.div`
-  margin-bottom: 64px;
+  margin-bottom: 4rem;
   @media (min-width: 48rem) {
     width: 100%;
     margin-bottom: unset;
@@ -89,7 +88,7 @@ const StyledAskAboutContainer = styled.div`
 
 const StyledAskAboutItem = styled.div`
   display: flex;
-  gap: 23px;
+  gap: 1.4375rem;
   align-items: center;
   text-align: left;
   margin-bottom: 1.5rem;

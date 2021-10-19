@@ -8,8 +8,8 @@ const StyledContactDisclaimerContainer = styled.div`
   background-position: 0px 115%;
 
   @media (min-width: 768px) {
-    min-height: 13rem;
     display: flex;
+    min-height: 13rem;
     align-items: center;
     align-content: center;
   }
@@ -19,10 +19,9 @@ const StyledContactDisclaimerContentWrapper = styled.div`
   text-align: center;
   width: 80%;
   margin: 0 auto;
-  padding-top: 5.1875rem;
-  padding-bottom: 6.25rem;
+  padding: 5.1875rem 0rem 6.25rem 0rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     display: flex;
     align-items: center;
     padding-top: unset;
@@ -39,16 +38,16 @@ const StyledContactDisclaimerContentWrapper = styled.div`
   h2 {
     margin-bottom: 2.5rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       margin-bottom: unset;
     }
   }
 
   a {
-    padding: 11px 33px;
-    text-decoration: none;
+    padding: 0.6875rem 2.0625rem;
     border: 2px solid ${(props) => props.theme.colors.secondary4};
     border-radius: 24px;
+    text-decoration: none;
     transition: 0.2s;
 
     &:hover {

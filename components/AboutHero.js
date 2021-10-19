@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const AboutHeroWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.primary1};
-  color: white;
+  color: ${(props) => props.theme.colors.primary3};
   padding-top: 1.25rem;
   padding-bottom: 6.75rem;
   background-image: url('/bg-pattern-about-1-mobile-nav-1.svg');
@@ -34,23 +34,18 @@ const AboutHeroContentWrapper = styled.div`
   }
 
   h1 {
-    margin-bottom: 16px;
-
-    @media (min-width: 768px) {
-      font-size: 64px;
-    }
+    margin-bottom: 1rem;
   }
   p {
     line-height: 28px;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       width: 65%;
       margin: 0 auto;
     }
     @media (min-width: 67.5rem) {
-      padding-top: 44px;
-
       position: relative;
+      padding-top: 2.75rem;
 
       &::before {
         content: '';

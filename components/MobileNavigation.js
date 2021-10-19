@@ -3,15 +3,15 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 const StyledMobileNavWrapper = styled.div`
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     display: none;
   }
   position: relative;
 
   button {
+    padding-right: calc(0vh + 10%);
     background-color: transparent;
     border: none;
-    padding-right: calc(0vh + 10%);
     cursor: pointer;
     transition: 0.2s;
 
@@ -25,14 +25,14 @@ const StyledMobileNav = styled.nav`
   background-color: ${(props) => props.theme.colors.primary1};
   position: relative;
   ul {
-    width: 90%;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 20vh;
     max-height: 200px;
     position: relative;
+    width: 90%;
+    margin: 0 auto;
   }
 `;
 
@@ -54,18 +54,18 @@ const StyledNavActive = styled.nav`
 `;
 
 const StyledNavOverlay = styled.div`
-  background-color: rgba(0, 0, 0, 0.5);
   min-height: 100vh;
   width: 30%;
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: ${(props) => (props.mobileNavOpen ? '1' : '0')};
   transition: 2s;
   cursor: pointer;
 `;
 
 const StyledNavActiveMenu = styled.div`
-  background-color: ${(props) => props.theme.colors.secondary2};
   min-height: 100vh;
   width: 70%;
+  background-color: ${(props) => props.theme.colors.secondary2};
   background-image: url('/bg-pattern-about-1-mobile-nav-1.svg');
   background-repeat: no-repeat;
   background-size: 200px;
@@ -86,7 +86,7 @@ const StyledNavActiveMenuLinksWrapper = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding-left: 48px;
+  padding-left: 3rem;
 
   a {
     text-decoration: none;
@@ -100,12 +100,12 @@ const StyledNavActiveMenuLinksWrapper = styled.ul`
 `;
 
 const StyledContactLink = styled.li`
-  margin-top: 36px;
+  margin-top: 2.25rem;
 
   a {
     border-radius: 24px;
     border: 2px solid white;
-    padding: 9px 33px;
+    padding: 0.5625rem 2.0625rem;
     transition: 0.2s;
 
     &:hover {
@@ -132,7 +132,7 @@ export default function MobileNavigation() {
               {/* eslint-disable-next-line  */}
               <img
                 src="/icon-hamburger.svg"
-                alt=""
+                alt="mobile navigation open button"
                 onClick={() => setMobileNavOpen(true)}
               />
             </button>
@@ -150,7 +150,7 @@ export default function MobileNavigation() {
               {/* eslint-disable-next-line  */}
               <img
                 src="/icon-close.svg"
-                alt="close icon"
+                alt="mobile navigation close icon"
               />
             </button>
           </StyledNavActiveMenuCloseWrapper>
