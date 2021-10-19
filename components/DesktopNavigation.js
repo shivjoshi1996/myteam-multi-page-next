@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 
 const StyledDesktopNavWrapper = styled.div`
   @media (min-width: 768px) {
@@ -69,6 +71,16 @@ const StyledLogo = styled.img`
 `;
 
 export default function DesktopNavigation() {
+  const desktopNav = useRef();
+
+  useEffect(() => {
+    gsap.fromTo(
+      desktopNav.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 1 }
+    );
+  }, []);
+
   return (
     <StyledDesktopNavWrapper>
       <StyledDesktopNav>
@@ -76,7 +88,11 @@ export default function DesktopNavigation() {
           <StyledDesktopLinksLeft>
             <li>
               <Link href="/">
-                <StyledLogo src="/logo.svg" alt="myteam logo" />
+                <StyledLogo
+                  ref={desktopNav}
+                  src="/logo.svg"
+                  alt="myteam logo"
+                />
               </Link>
             </li>
             <li>
