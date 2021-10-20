@@ -101,23 +101,29 @@ const StyledSuccessStoryJobTitle = styled.p`
 export default function SuccessStoriesSection() {
   const storyRef = useRef();
   const q = gsap.utils.selector(storyRef);
+  const tl = useRef();
 
   useEffect(() => {
-    gsap.to(q('.story'), {
-      scrollTrigger: '.story',
-      opacity: 1,
-      stagger: 0.5,
-      scrub: 0.5,
-    });
+    tl.current = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: '.section',
+          start: '50% bottom',
+        },
+      })
+      .to(q('.story'), {
+        opacity: 1,
+        stagger: 0.3,
+      });
   }, []);
 
   return (
-    <StyledSuccessStoriesSection>
+    <StyledSuccessStoriesSection ref={storyRef} className="section">
       <h2>
         Delivering real results for top companies. Some of our
         <span> success stories.</span>
       </h2>
-      <StyledSuccessStoriesContainer ref={storyRef}>
+      <StyledSuccessStoriesContainer>
         <StyledSuccessStory className="story">
           <StyledSuccessStoryDescription>
             “The team perfectly fit the specialized skill set required. They

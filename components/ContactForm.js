@@ -8,6 +8,7 @@ const StyledContactForm = styled.form`
   width: 100%;
   background-color: transparent;
   color: ${(props) => props.theme.colors.primary3};
+  opacity: 0;
 
   input[type='text'],
   input[type='email'],
@@ -94,7 +95,7 @@ export default function ContactForm() {
   }
 
   return (
-    <StyledContactForm>
+    <StyledContactForm className="contact-form">
       <label>
         Name:
         <input

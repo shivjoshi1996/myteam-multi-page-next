@@ -1,3 +1,5 @@
+import { gsap } from 'gsap';
+import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const AboutHeroWrapper = styled.div`
@@ -24,6 +26,7 @@ const AboutHeroContentWrapper = styled.div`
   width: 90%;
   margin: 0 auto;
   text-align: center;
+  overflow: hidden;
 
   @media (min-width: 67.5rem) {
     display: flex;
@@ -35,6 +38,8 @@ const AboutHeroContentWrapper = styled.div`
 
   h1 {
     margin-bottom: 1rem;
+    transform: translateY(-200px);
+    opacity: 0;
   }
   p {
     line-height: 28px;
@@ -60,10 +65,21 @@ const AboutHeroContentWrapper = styled.div`
 `;
 
 export default function AboutHero() {
+  const heroRef = useRef();
+  const q = gsap.utils.selector(heroRef);
+
+  useEffect(() => {
+    gsap.to(q('.hero'), {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+    });
+  }, []);
+
   return (
     <AboutHeroWrapper>
-      <AboutHeroContentWrapper>
-        <h1>About</h1>
+      <AboutHeroContentWrapper ref={heroRef}>
+        <h1 className="hero">About</h1>
         <p>
           We help companies build dynamic teams made up of top global talent.
           Using our network of passionate professionals we drive innovation and

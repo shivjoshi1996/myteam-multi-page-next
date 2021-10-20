@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import styled from 'styled-components';
+import { gsap } from 'gsap';
+import { useEffect, useRef } from 'react';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
@@ -45,6 +47,7 @@ const StyledContactContentWrapper = styled.div`
 `;
 
 const StyledContactTopContentContainer = styled.div`
+  overflow: hidden;
   margin-bottom: 4rem;
   @media (min-width: 48rem) {
     width: 100%;
@@ -56,6 +59,8 @@ const StyledContactPageHeading = styled.div`
   h1 {
     color: white;
     margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(-200px);
 
     @media (min-width: 48rem) {
       margin-bottom: 1.5rem;
@@ -64,6 +69,7 @@ const StyledContactPageHeading = styled.div`
   h2 {
     color: ${(props) => props.theme.colors.primary2};
     margin-bottom: 2.5rem;
+    opacity: 0;
 
     @media (min-width: 48rem) {
       margin-bottom: 4rem;
@@ -92,6 +98,7 @@ const StyledAskAboutItem = styled.div`
   align-items: center;
   text-align: left;
   margin-bottom: 1.5rem;
+  opacity: 0;
 
   p {
     color: white;
@@ -102,6 +109,32 @@ const StyledAskAboutItem = styled.div`
 `;
 
 export default function Contact() {
+  const contactRef = useRef();
+  const q = gsap.utils.selector(contactRef);
+  const tl = useRef();
+
+  useEffect(() => {
+    tl.current = gsap
+      .timeline()
+      .to(q('.heading'), {
+        opacity: 1,
+        duration: 1,
+        delay: 0.3,
+        y: 0,
+      })
+      .to(q('.subheading'), {
+        opacity: 1,
+        duration: 0.3,
+      })
+      .to(q('.ask-about-item'), {
+        opacity: 1,
+        stagger: 0.3,
+      })
+      .to(q('.contact-form'), {
+        opacity: 1,
+      });
+  }, []);
+
   return (
     <>
       <Head>
@@ -111,28 +144,28 @@ export default function Contact() {
       </Head>
       <Navigation />
       <StyledContactSection>
-        <StyledContactContentWrapper>
+        <StyledContactContentWrapper ref={contactRef}>
           <StyledContactTopContentContainer>
             <StyledContactPageHeading>
-              <h1>Contact</h1>
-              <h2>Ask us about</h2>
+              <h1 className="heading">Contact</h1>
+              <h2 className="subheading">Ask us about</h2>
             </StyledContactPageHeading>
             <StyledAskAboutContainer>
-              <StyledAskAboutItem>
+              <StyledAskAboutItem className="ask-about-item">
                 <img src="/icon-person.svg" alt="" />
                 <p>The Quality of our talent network</p>
               </StyledAskAboutItem>
-              <StyledAskAboutItem>
+              <StyledAskAboutItem className="ask-about-item">
                 <img src="/icon-cog.svg" alt="" />
                 <p>Usage & implementation of our software</p>
               </StyledAskAboutItem>
-              <StyledAskAboutItem>
+              <StyledAskAboutItem className="ask-about-item">
                 <img src="/icon-chart.svg" alt="" />
                 <p>How we help drive innovation</p>
               </StyledAskAboutItem>
             </StyledAskAboutContainer>
           </StyledContactTopContentContainer>
-          <ContactForm />
+          <ContactForm clasSName="contact-form" />
         </StyledContactContentWrapper>
       </StyledContactSection>
       <Footer />

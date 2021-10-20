@@ -1,4 +1,9 @@
 import styled from 'styled-components';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useEffect, useRef } from 'react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const StyledClientsSection = styled.section`
   padding: 5.5rem 0rem;
@@ -46,6 +51,7 @@ const StyledLogoContainer = styled.div`
   }
 
   img {
+    opacity: 0;
     max-width: 160px;
     height: auto;
 
@@ -64,8 +70,22 @@ const StyledLogoContainer = styled.div`
 `;
 
 export default function ClientsSection() {
+  const clientsRef = useRef();
+  const q = gsap.utils.selector(clientsRef);
+
+  useEffect(() => {
+    gsap.to(q('img'), {
+      scrollTrigger: {
+        trigger: '.section',
+        start: 'top top',
+      },
+      opacity: 1,
+      stagger: 0.3,
+    });
+  }, []);
+
   return (
-    <StyledClientsSection>
+    <StyledClientsSection ref={clientsRef} className="section">
       <h2>Some of our clients</h2>
       <StyledLogoContainer>
         <img src="/logo-the-verge.png" alt="Logo of the verge" />

@@ -1,5 +1,10 @@
 import styled from 'styled-components';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useEffect, useRef } from 'react';
 import ProfileCard from './ProfileCard';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const StyledDirectorsSection = styled.section`
   background-color: ${(props) => props.theme.colors.secondary3};
@@ -27,10 +32,25 @@ const StyledDirectorsGrid = styled.div`
 `;
 
 export default function DirectorsSection() {
+  const directorsRef = useRef();
+  const q = gsap.utils.selector(directorsRef);
+
+  useEffect(() => {
+    gsap.to(q('.profile-card'), {
+      scrollTrigger: {
+        trigger: '.section',
+        start: 'top 50%',
+      },
+      y: 0,
+      opacity: 1,
+      stagger: 0.3,
+    });
+  }, []);
+
   return (
-    <StyledDirectorsSection>
+    <StyledDirectorsSection className="section">
       <h2>Meet the directors</h2>
-      <StyledDirectorsGrid>
+      <StyledDirectorsGrid ref={directorsRef}>
         <ProfileCard
           profileImage="/avatar-nikita.jpg"
           name="Nikita Marks"
