@@ -2,6 +2,8 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 const StyledProfileCardContainer = styled.div`
+  opacity: 0;
+  transform: translateY(25px);
   height: 281px;
   width: 100%;
   background-color: transparent;
@@ -118,7 +120,7 @@ export default function ProfileCard({ profileImage, name, title, quote }) {
   const [isToggled, setIsToggled] = useState(false);
 
   return (
-    <StyledProfileCardContainer>
+    <StyledProfileCardContainer className="profile-card">
       <StyledProfileContentContainer>
         <StyledProfileOuterContent isToggled={isToggled}>
           <img src={profileImage} alt="" />

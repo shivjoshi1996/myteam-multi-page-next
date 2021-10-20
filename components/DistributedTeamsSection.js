@@ -1,4 +1,9 @@
+import { gsap } from 'gsap';
+import { useEffect, useRef } from 'react';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import styled from 'styled-components';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const StyledDistributedSection = styled.section`
   background-color: ${(props) => props.theme.colors.secondary4};
@@ -73,6 +78,7 @@ const StyledDistributedListContainer = styled.div`
 `;
 
 const StyledDistributedListItem = styled.div`
+  opacity: 0;
   @media (min-width: 48rem) {
     display: grid;
     grid-template-columns: 72px 1fr;
@@ -113,14 +119,32 @@ const StyledDistributedListItem = styled.div`
 `;
 
 export default function DistributedTeamsSection() {
+  const distributedTeamsRef = useRef();
+  const q = gsap.utils.selector(distributedTeamsRef);
+  const tl = useRef();
+
+  useEffect(() => {
+    tl.current = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: '.wrapper',
+          start: '40% bottom ',
+        },
+      })
+      .to(q('.item'), {
+        opacity: 1,
+        stagger: 0.3,
+      });
+  }, []);
+
   return (
-    <StyledDistributedSection>
-      <StyledDistributedWrapper>
+    <StyledDistributedSection ref={distributedTeamsRef}>
+      <StyledDistributedWrapper className="wrapper">
         <StyledDistributedHeading>
           <h2>Build & manage distributed teams like no one else.</h2>
         </StyledDistributedHeading>
         <StyledDistributedListContainer>
-          <StyledDistributedListItem>
+          <StyledDistributedListItem className="item">
             <img src="/icon-person.svg" alt="" />
             <h3>Experienced Individuals</h3>
             <p>
@@ -128,7 +152,7 @@ export default function DistributedTeamsSection() {
               passionate about what they do.
             </p>
           </StyledDistributedListItem>
-          <StyledDistributedListItem>
+          <StyledDistributedListItem className="item">
             <img src="/icon-cog.svg" alt="" />
             <h3>Easy to Implement</h3>
             <p>
@@ -136,7 +160,7 @@ export default function DistributedTeamsSection() {
               meaning our teams always deliver.
             </p>
           </StyledDistributedListItem>
-          <StyledDistributedListItem>
+          <StyledDistributedListItem className="item">
             <img src="/icon-chart.svg" alt="" />
             <h3>Enhanced Productivity</h3>
             <p>
