@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { gsap } from 'gsap';
+import { useEffect, useRef } from 'react';
 
 const StyledHomepageHeroWrapper = styled.div`
   display: flex;
@@ -28,6 +30,7 @@ const StyledHomepageHeroWrapper = styled.div`
     margin: 0 auto;
     margin-top: 3.125rem;
     margin-bottom: 1.125rem;
+    transform: translateY(-200px);
 
     @media (min-width: 48rem) {
       max-width: 683px;
@@ -73,6 +76,7 @@ const StyledHomepageHeroWrapper = styled.div`
 const StyledHomepageHeroContentWrapper = styled.div`
   width: 90%;
   margin: 0 auto;
+  overflow: hidden;
 
   @media (min-width: 67.5rem) {
     display: flex;
@@ -84,10 +88,21 @@ const StyledHomepageHeroContentWrapper = styled.div`
 `;
 
 export default function HomepageHero() {
+  const heroRef = useRef();
+  const q = gsap.utils.selector(heroRef);
+
+  useEffect(() => {
+    gsap.to(q('.hero'), {
+      y: 0,
+      duration: 1,
+      stagger: 0.5,
+    });
+  }, []);
+
   return (
     <StyledHomepageHeroWrapper>
-      <StyledHomepageHeroContentWrapper>
-        <h1>
+      <StyledHomepageHeroContentWrapper ref={heroRef}>
+        <h1 className="hero">
           Find the best <span>talent</span>
         </h1>
         <p>

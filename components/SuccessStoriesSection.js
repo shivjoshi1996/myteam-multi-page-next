@@ -1,4 +1,9 @@
 import styled from 'styled-components';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useEffect, useRef } from 'react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const StyledSuccessStoriesSection = styled.section`
   background-color: ${(props) => props.theme.colors.secondary3};
@@ -65,6 +70,7 @@ const StyledSuccessStory = styled.div`
   background-image: url('/icon-quotes.svg');
   background-repeat: no-repeat;
   background-position: top center;
+  opacity: 0;
 
   h3 {
     color: ${(props) => props.theme.colors.secondary1};
@@ -93,14 +99,26 @@ const StyledSuccessStoryJobTitle = styled.p`
 `;
 
 export default function SuccessStoriesSection() {
+  const storyRef = useRef();
+  const q = gsap.utils.selector(storyRef);
+
+  useEffect(() => {
+    gsap.to(q('.story'), {
+      scrollTrigger: '.story',
+      opacity: 1,
+      stagger: 0.5,
+      scrub: 0.5,
+    });
+  }, []);
+
   return (
     <StyledSuccessStoriesSection>
       <h2>
         Delivering real results for top companies. Some of our
         <span> success stories.</span>
       </h2>
-      <StyledSuccessStoriesContainer>
-        <StyledSuccessStory>
+      <StyledSuccessStoriesContainer ref={storyRef}>
+        <StyledSuccessStory className="story">
           <StyledSuccessStoryDescription>
             “The team perfectly fit the specialized skill set required. They
             focused on the most essential features helping us launch the
@@ -112,7 +130,7 @@ export default function SuccessStoriesSection() {
           </StyledSuccessStoryJobTitle>
           <img src="/avatar-kady.jpg" alt="" />
         </StyledSuccessStory>
-        <StyledSuccessStory>
+        <StyledSuccessStory className="story">
           <StyledSuccessStoryDescription>
             “We needed to automate our entire onboarding process. The team came
             in and built out the whole journey. Since going live, user retention
@@ -124,7 +142,7 @@ export default function SuccessStoriesSection() {
           </StyledSuccessStoryJobTitle>
           <img src="/avatar-aiysha.jpg" alt="" />
         </StyledSuccessStory>
-        <StyledSuccessStory>
+        <StyledSuccessStory className="story">
           <StyledSuccessStoryDescription>
             “Amazing. Our team helped us build an app that delivered a new
             experience for hiring a physio. The launch was an instant success
