@@ -1,34 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Time tracking dashboard solution
 
-## Getting Started
+This is a solution to the [MyTeam multipage website on Frontendmentor.io](https://www.frontendmentor.io/challenges/myteam-multipage-website-mxlEauvW). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### The challenge
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Users should be able to:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
 
-## Learn More
+### Screenshot
 
-To learn more about Next.js, take a look at the following resources:
+![](./screenshot.jpg)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Live Site URL: [https://quirky-mcclintock-c39fc3.netlify.app/](https://quirky-mcclintock-c39fc3.netlify.app/)
 
-## Deploy on Vercel
+## My process
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Built with
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- HTML5
+- CSS3
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [Styled Components](https://styled-components.com/) - For styles
+- [GSAP](https://greensock.com/) - For animation
+
+
+### What I learned
+
+I learned a great deal while doing this challenge. One I would like to highlight, would be using GSAP for animations. 
+
+I have used GSAP to trigger animations on page load using the React useEffect hook, as well as using GSAP's ScrollTrigger API to trigger animations when a component comes into a users view.
+
+I also learned about NextJS, and the nuances of using the Link component. 
+
+### Continued development
+
+I would like to continue to use GSAP, and learn how to finely control ScrollTrigger animations so that each component reacts independantly, rather than all of the components being animated altogether. Right now, I'm using stagger to make the components look like they're animating when the user scrolls. However, being able to control each independant component would be better. 
+
+Furthermore, I would like to focus on my code organization, particularly with my styled-components. 
+
+### Useful resources
+
+- [GSAP React Docs](https://greensock.com/react/) - This helped me get up to speed with how to use GSAP in a React project. 
+
+
+## Author
+
+- Website - [www.shivamjoshi.com](https://www.your-site.com)
+- Frontend Mentor - [@shivjoshi1996](https://www.frontendmentor.io/profile/shivjoshi1996)
+- Twitter - [@shiv_J](https://www.twitter.com/Shiv_J)
