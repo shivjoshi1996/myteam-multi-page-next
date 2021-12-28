@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](https://github.com/shivjoshi1996/myteam-multi-page-next/raw/main/public/myteam-screenshot.png)
 
 ### Links
 
