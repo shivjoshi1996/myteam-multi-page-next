@@ -1,4 +1,4 @@
-# Frontend Mentor - Time tracking dashboard solution
+# Frontend Mentor - MyTeam multipage website solution
 
 This is a solution to the [MyTeam multipage website on Frontendmentor.io](https://www.frontendmentor.io/challenges/myteam-multipage-website-mxlEauvW). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
